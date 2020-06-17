@@ -11,4 +11,10 @@
   <%= f.label :password %> <br/>
   <%= f.password_field :password %>
 </p>
+<ul>
+  <% @user.errors.full_messages.each do |error| %>
+  <li><%= error %></li>
+  <% end %>
+</ul>
 <p><%= f.submit %></p>
+<% end %>
